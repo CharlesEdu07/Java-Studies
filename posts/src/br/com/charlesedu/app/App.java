@@ -29,24 +29,7 @@ public class App {
         p2.addComment(c3);
         p2.addComment(c4);
 
-        System.out.println(p1.getTitle());
-        System.out.println(p1.getLikes() + " likes - " + sdf.format(p1.getMoment()));
-        System.out.println(p1.getContent());
-        System.out.println("Comments:");
-        
-        for (int i = 0; i < p1.getComments().size(); i++) {
-            System.out.println(p1.getComments().get(i).getText());
-        }
-
-        System.out.println();
-
-        System.out.println(p2.getTitle());
-        System.out.println(p2.getLikes() + " likes - " + sdf.format(p2.getMoment()));
-        System.out.println(p2.getContent());
-        System.out.println("Comments:");
-
-        for (int i = 0; i < p2.getComments().size(); i++) {
-            System.out.println(p2.getComments().get(i).getText());
-        }
+        System.out.println(p1);
+        System.out.println(p2);
     }
 }
