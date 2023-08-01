@@ -1,4 +1,4 @@
-package entities;
+package br.com.charlesedu.entities;
 
 public class Rectangle {
 	public double width;

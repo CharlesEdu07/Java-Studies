@@ -1,4 +1,4 @@
-package util;
+package br.com.charlesedu.util;
 
 public class CurrencyConverter {
 	public static double convert(double dolarPrice, double dolarValue) {

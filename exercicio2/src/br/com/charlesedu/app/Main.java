@@ -1,9 +1,9 @@
-package application;
+package br.com.charlesedu.app;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Employee;
+import br.com.charlesedu.entities.Employee;
 
 public class Main {
 

@@ -1,9 +1,9 @@
-package application;
+package br.com.charlesedu.app;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import util.CurrencyConverter;
+import br.com.charlesedu.util.CurrencyConverter;
 
 public class Main {
 

@@ -1,9 +1,9 @@
-package application;
+package br.com.charlesedu.app;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Rectangle;
+import br.com.charlesedu.entities.Rectangle;
 
 public class Main {
 
