@@ -1,10 +1,10 @@
-package entities;
+package br.com.charlesedu.entities;
 
 public class Client {
 	private int room;
 	private String name;
 	private String email;
-	
+
 	public Client(int room, String name, String email) {
 		this.room = room;
 		this.name = name;

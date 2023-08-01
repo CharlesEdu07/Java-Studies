@@ -1,10 +1,12 @@
-package app;
+package br.com.charlesedu.app;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+
+import br.com.charlesedu.entities.Employee;
+
 import java.util.ArrayList;
-import entities.Employee;
 
 public class App {
 

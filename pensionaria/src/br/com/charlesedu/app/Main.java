@@ -1,9 +1,9 @@
-package application;
+package br.com.charlesedu.app;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Client;
+import br.com.charlesedu.entities.Client;
 
 public class Main {
 	public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Main {
 
 		for (int i = 0; i < n; i++) {
 			System.out.printf("%nRent #%d%n", i + 1);
-			
+
 			System.out.print("Name: ");
 			sc.nextLine();
 			String name = sc.nextLine();
