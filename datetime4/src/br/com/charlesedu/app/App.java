@@ -16,7 +16,6 @@ public class App {
 
         LocalDate d1 = LocalDate.parse("2020-01-01");
         LocalDateTime d2 = LocalDateTime.parse("2020-01-01T10:00:00");
-        Instant d3 = Instant.parse("2020-01-01T10:00:00Z");
 
         LocalDate lastWeek = d1.minusWeeks(1);
         LocalDate nextWeek = d1.plusWeeks(1);
