@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import br.com.charlesedu.models.entities.Contract;
 import br.com.charlesedu.models.services.ContractService;
+import br.com.charlesedu.models.services.PaypalService;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -33,9 +34,9 @@ public class App {
 
         System.out.println("Parcelas: ");
 
-        ContractService contractService = new ContractService();
+        ContractService contractService = new ContractService(contract, months, new PaypalService());
 
-        contractService.processContract(contract, months);
+        contractService.processContract();
 
         for (int i = 0; i < contract.getInstallments().size(); i++) {
             System.out.println(contract.getInstallments().get(i).getDueDate().format(formatter) + " - "

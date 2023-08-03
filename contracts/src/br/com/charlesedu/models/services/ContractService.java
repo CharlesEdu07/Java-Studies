@@ -4,12 +4,22 @@ import br.com.charlesedu.models.entities.Contract;
 import br.com.charlesedu.models.entities.Installment;
 
 public class ContractService {
-    public void processContract(Contract contract, int month) {
-        double basicPayment = contract.getTotalValue() / month;
+    private Contract contract;
+    private int months;
+    private OnlinePaymentService onlinePaymentService;
 
-        for (int i = 1; i <= month; i++) {
-            double updatedQuota = basicPayment + new PaypalService().interest(basicPayment, i);
-            double fullQuota = updatedQuota + new PaypalService().paymentFee(updatedQuota);
+    public ContractService(Contract contract, int months, OnlinePaymentService onlinePaymentService) {
+        this.contract = contract;
+        this.months = months;
+        this.onlinePaymentService = onlinePaymentService;
+    }
+
+    public void processContract() {
+        double basicPayment = contract.getTotalValue() / months;
+
+        for (int i = 1; i <= months; i++) {
+            double updatedQuota = basicPayment + onlinePaymentService.interest(basicPayment, i);
+            double fullQuota = updatedQuota + onlinePaymentService.paymentFee(updatedQuota);
             
             contract.getInstallments().add(new Installment(contract.getDate().plusMonths(i), fullQuota));
         }
