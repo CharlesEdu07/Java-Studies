@@ -34,9 +34,9 @@ public class App {
 
         System.out.println("Parcelas: ");
 
-        ContractService contractService = new ContractService(contract, months, new PaypalService());
+        ContractService contractService = new ContractService(new PaypalService());
 
-        contractService.processContract();
+        contractService.processContract(contract, months);
 
         for (int i = 0; i < contract.getInstallments().size(); i++) {
             System.out.println(contract.getInstallments().get(i).getDueDate().format(formatter) + " - "
