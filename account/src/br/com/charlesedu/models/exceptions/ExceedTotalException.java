@@ -1,7 +1,10 @@
 package br.com.charlesedu.models.exceptions;
 
 public class ExceedTotalException extends Exception {
-    public ExceedTotalException(String message) {
+ 
+	private static final long serialVersionUID = 1L;
+
+	public ExceedTotalException(String message) {
         super(message);
     }
 
